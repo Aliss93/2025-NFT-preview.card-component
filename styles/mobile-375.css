@@ -1,47 +1,97 @@
+/* Variables */
 :root {
-
-    --Blue-500:  hsl(215, 51%, 70%);
-    --Cyan-400: hsl(178, 100%, 50%);
-    --Blue-950-mainBG: hsl(217, 54%, 11%);
-    --Blue-900-cardBG: hsl(216, 50%, 16%);
-    --Blue-800-line: hsl(215, 32%, 27%);
-    --White: hsl(0, 0%, 100%);
-
-    --font-size:18 px;
-}
-.outfit-300{
-    font-family: "outfit",sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
+  --Blue-500: hsl(215, 51%, 70%);
+  --Cyan-400: hsl(178, 100%, 50%);
+  --Blue-950-mainBG: hsl(217, 54%, 11%);
+  --Blue-900-cardBG: hsl(216, 50%, 16%);
+  --Blue-800-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+  --font-size: 18px;
 }
 
-.outfit-400{
-    font-family: "outfit",sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.outfit-600{
-    font-family: "outfit",sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-}
-
+/* Fuente */
 body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background: var(--Blue-950-mainBG);
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--Blue-950-mainBG);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
+/* Tarjeta principal */
 .card {
-    background: var(--Blue-900-mainBG);
-    margin: 30px 10px;
+  background-color: var(--Blue-900-cardBG);
+  padding: 20px;
+  border-radius: 15px;
+  width: 320px;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.3);
 }
 
-.main-card h3{
-    color: var(--White)
+/* Imagen del NFT */
+.image-container img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Título */
+.title {
+  color: var(--White);
+  margin: 0 0 10px;
+}
+
+/* Descripción */
+.description {
+  color: var(--Blue-500);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+/* Precio y tiempo */
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.price {
+  color: var(--Cyan-400);
+  font-weight: 600;
+}
+
+.time {
+  color: var(--Blue-500);
+}
+
+/* Línea */
+hr {
+  border: none;
+  border-top: 1px solid var(--Blue-800-line);
+  margin-bottom: 15px;
+}
+
+/* Creador */
+.creator {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 0.85rem;
+  color: var(--Blue-500);
+}
+
+.creator .avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid var(--White);
+}
+
+.creator strong {
+  color: var(--White);
+  font-weight: 600;
 }
